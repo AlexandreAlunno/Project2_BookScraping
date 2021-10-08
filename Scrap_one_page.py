@@ -46,10 +46,10 @@ def scrap_data_books(url):
     image_url = image[0].get("src")
     incomplete_url = image_url.split("../..")
     root_url = "http://books.toscrape.com"
-    complete_url = [root_url + incomplete_url[1]]
+    image_complete_url = [root_url + incomplete_url[1]]
     #print(complete_url)
 
-    book_data = url_page + categorie + titre_officiel + product_description + data_tableau + complete_url
+    book_data = url_page + categorie + titre_officiel + product_description + data_tableau + image_complete_url
 
     return book_data
 
