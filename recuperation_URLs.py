@@ -19,10 +19,13 @@ list_url_book = []
 
 for image in url_next_book:
     incomplete_url = image.findChildren("a", recursive=False)
-   #print(incomplete_url)
+    #print(incomplete_url)
     image_url = incomplete_url[0].get("href")
     #print("image url: " + str(image_url))
-    list_url_book.append(image_url)
+    short_url = image_url.split("../../..")
+    root_url = "http://books.toscrape.com/catalogue"
+    complete_url = root_url + short_url[0]
+    list_url_book.append(complete_url)
 
 print(list_url_book)
 
