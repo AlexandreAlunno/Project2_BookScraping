@@ -8,6 +8,7 @@ def scrap_data_books(url):
     reponse = requests.get(url)
     page = reponse.content
     soup = BeautifulSoup(page, "html.parser")
+    url_page = [url]
 
     #récupération categorie
     genre = soup.find_all("a")
@@ -48,7 +49,7 @@ def scrap_data_books(url):
     complete_url = [root_url + incomplete_url[1]]
     #print(complete_url)
 
-    book_data = categorie + titre_officiel + product_description + data_tableau + complete_url
+    book_data = url_page + categorie + titre_officiel + product_description + data_tableau + complete_url
 
     return book_data
 
@@ -56,7 +57,7 @@ book_data = scrap_data_books(url)
 
 print(book_data)
 
-en_tete = ["Categorie", "Titre", "Description", "UPC", "Type", "Prix Hors Tax", "Prix Avec Tax", "Tax", "Disponnibilité", "Nombre d'avis", "URL Couverture"]
+en_tete = ["URL", "Categorie", "Titre", "Description", "UPC", "Type", "Prix Hors Tax", "Prix Avec Tax", "Tax", "Disponnibilité", "Nombre d'avis", "URL Couverture"]
 with open("data_livre.csv", "w") as csv_file:
     writer = csv.writer(csv_file, delimiter=",")
     writer.writerow(en_tete)
