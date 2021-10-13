@@ -17,15 +17,17 @@ def recuperation_urls_books(url):
         root_url = "http://books.toscrape.com/catalogue"
         complete_url = root_url + short_url[1]
         list_url_book.append(complete_url)
-    #print(list_url_book)
+    print(list_url_book)
     return list_url_book
 
 
+
 if __name__ == '__main__':
-    url = "http://books.toscrape.com/catalogue/category/books/travel_2/index.html"
+    url = "http://books.toscrape.com/catalogue/category/books/fiction_10/index.html"
     reponse = requests.get(url)
     page = reponse.content
     soup = BeautifulSoup(page, "html.parser")
     url_next_book = soup.find_all("div", class_="image_container")
     list_url_book = []
     recuperation_urls_books(url)
+
