@@ -24,7 +24,7 @@ def next_page_url(category_url):
     for page in range(2, number_of_pages + 1):
         complete_url = f"http://books.toscrape.com/catalogue/category/books_1/page-{page}.html"
         url_next_page.append(complete_url)
-    print(url_next_page)
+    #print(url_next_page)
     return url_next_page
 
 

@@ -17,7 +17,7 @@ def recuperation_urls_books(url):
         root_url = "http://books.toscrape.com/catalogue"
         complete_url = root_url + short_url[1]
         list_url_book.append(complete_url)
-    print(list_url_book)
+    #print(list_url_book)
     return list_url_book
 
 
