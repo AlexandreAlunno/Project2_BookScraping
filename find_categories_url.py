@@ -20,7 +20,7 @@ def find_categories_url(home_url):
         complete_url = root_url + category_url
         category_list.append(complete_url)
     #print(complete_url)
-    #print(category_list)
+    print(category_list)
     return category_list
 
 
@@ -31,3 +31,5 @@ if __name__ == '__main__':
     soup = BeautifulSoup(page, "html.parser")
     root_url = "http://books.toscrape.com/"
     find_categories_url(home_url)
+
+
