@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-
+import shutil
 
 def scrap_data_books(book_url):
     # book_url = 'http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html'
@@ -39,9 +39,10 @@ def scrap_data_books(book_url):
     image_complete_url = [root_url + incomplete_url[1]]
 
     book_data = url_page + categorie + titre_officiel + product_description + data_tableau + image_complete_url
+    #print(book_data)
     return book_data
 
 
 if __name__ == '__main__':
-    book_url = 'http://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html'
-    scrap_data_books(book_url)
+    book_url = 'http://books.toscrape.com/catalogue/orange-the-complete-collection-1-orange-the-complete-collection-1_914/index.html'
+    book_data = scrap_data_books(book_url)
