@@ -1,4 +1,5 @@
-#Project2_BookScraping
+
+# Project2_BookScraping
 This project was made to scrap the data from the site http://books.toscrape.com/index.html \
 Files overview: \
 recuperation_URLs.py \
