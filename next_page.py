@@ -38,7 +38,6 @@ def next_buton(page_url):
         incomplete_url = root_url.split("index.html")
 
         next_page_url = incomplete_url[0] + next_url
-    )
     return next_page_url, last_page
 
 

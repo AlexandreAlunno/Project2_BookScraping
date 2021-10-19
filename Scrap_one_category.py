@@ -8,7 +8,7 @@ from next_page import next_buton
 last_page = False
 books_data = []
 #1.get first page url
-page_url = "http://books.toscrape.com/catalogue/category/books/philosophy_7/index.html"
+page_url = "http://books.toscrape.com/catalogue/category/books/classics_6/index.html"
 
 #2.get url of each books on the page
 while last_page == False:
@@ -26,7 +26,7 @@ while last_page == False:
 print(books_data)
 
 en_tete = ["URL", "Categorie", "Titre", "Description", "UPC", "Type", "Prix Hors Tax", "Prix Avec Tax", "Tax", "Disponnibilité", "Nombre d'avis", "URL Couverture"]
-with open("data_livre_one_category.csv", "w") as csv_file:
+with open("data_livre_one_category.csv", "w", encoding='utf-8') as csv_file:
     writer = csv.writer(csv_file, delimiter=",")
     writer.writerow(en_tete)
     for data in books_data:
