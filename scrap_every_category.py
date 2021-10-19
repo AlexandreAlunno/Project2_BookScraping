@@ -4,7 +4,7 @@ import csv
 import shutil
 import requests
 from recuperation_URLs import recuperation_urls_books
-from Scrap_one_book import scrap_data_books
+from scrap_one_book import scrap_data_books
 from next_page import next_buton
 from find_categories_url import find_categories_url
 
