@@ -12,12 +12,13 @@ def find_categories_url(home_url):
     category_names = []
     category_in_html = soup.find("ul", class_='nav nav-list')
     category_balise = category_in_html.findChildren("a", recursive=True)
-    #print(category_balise)
+
     for category in category_balise:
         category_url = category.get("href")
         complete_url = root_url + category_url
         category_list.append(complete_url)
     category_list.pop(0)
+
     for names in category_list:
         first_split = names.split("http://books.toscrape.com/catalogue/category/books/")
         second_split = first_split[1].split("/index.html")

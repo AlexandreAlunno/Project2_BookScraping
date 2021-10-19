@@ -26,7 +26,6 @@ for categories, names in zip(page_urls, category_names):
     number_category += 1
     en_tete = ["URL", "Categorie", "Titre", "Description", "UPC", "Type", "Prix Hors Tax", "Prix Avec Tax", "Tax","Disponnibilité", "Nombre d'avis", "URL Couverture"]
     csv_file_name = f"categories_csv_files\\{number_category}_{names}.csv"
-    print(csv_file_name)
     with open(csv_file_name, "w", encoding='utf-8') as csv_file:
         writer = csv.writer(csv_file, delimiter=",")
         writer.writerow(en_tete)

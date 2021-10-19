@@ -2,9 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 from math import *
 
-
-
 page_url = "http://books.toscrape.com/catalogue/category/books/travel_2/index.html"
+
 
 def number_of_page(page):
     reponse = requests.get(page_url)
@@ -15,8 +14,6 @@ def number_of_page(page):
     url_next_page = []
 
     number_of_pages = ceil(int(total_number_books) / 20)
-    print(number_of_pages)
-
 
 
 def next_buton(page_url):
@@ -39,10 +36,6 @@ def next_buton(page_url):
 
         next_page_url = incomplete_url[0] + next_url
     return next_page_url, last_page
-
-
-
-
 
 
 if __name__ == '__main__':

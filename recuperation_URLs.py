@@ -1,5 +1,7 @@
+
 import requests
 from bs4 import BeautifulSoup
+
 
 def recuperation_urls_books(url):
     reponse = requests.get(url)
@@ -18,7 +20,6 @@ def recuperation_urls_books(url):
     return list_url_book
 
 
-
 if __name__ == '__main__':
     url = "http://books.toscrape.com/catalogue/category/books_1/index.html"
     reponse = requests.get(url)
@@ -27,4 +28,3 @@ if __name__ == '__main__':
     url_next_book = soup.find_all("div", class_="image_container")
     list_url_book = []
     recuperation_urls_books(url)
-
