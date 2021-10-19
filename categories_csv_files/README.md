@@ -1,1 +1,1 @@
-This File will contain the folders of each category
+This Directory will contain the folders of each category
