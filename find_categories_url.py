@@ -21,7 +21,8 @@ def find_categories_url(home_url):
     for names in category_list:
         first_split = names.split("http://books.toscrape.com/catalogue/category/books/")
         second_split = first_split[1].split("/index.html")
-        category_names.append(second_split[0])
+        third_split = second_split[0].split("_")
+        category_names.append(third_split[0])
     return category_list, category_names
 
 
