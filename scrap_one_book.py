@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 
+
 def scrap_data_books(book_url):
     reponse = requests.get(book_url)
     page = reponse.content
@@ -35,7 +36,6 @@ def scrap_data_books(book_url):
 
     book_data = url_page + categorie + titre_officiel + product_description + data_tableau + image_complete_url
     return book_data
-
 
 
 if __name__ == '__main__':

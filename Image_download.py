@@ -14,7 +14,6 @@ incomplete_url = image_url.split("../..")
 root_url = "http://books.toscrape.com"
 image_complete_url = [root_url + incomplete_url[1]]
 
-print(image_complete_url)
 
 r = requests.get(image_complete_url[0], stream=True)
 
