@@ -1,5 +1,4 @@
 import os
-from os import path
 import csv
 import shutil
 import requests

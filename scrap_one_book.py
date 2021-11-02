@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import csv
 
 
 def scrap_data_books(book_url):

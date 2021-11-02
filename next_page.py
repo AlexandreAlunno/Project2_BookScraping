@@ -5,17 +5,6 @@ from math import *
 page_url = "http://books.toscrape.com/catalogue/category/books/travel_2/index.html"
 
 
-def number_of_page(page):
-    reponse = requests.get(page_url)
-    page = reponse.content
-    soup = BeautifulSoup(page, "html.parser")
-    emplacement = soup.find_all("strong")
-    total_number_books = emplacement[1].string
-    url_next_page = []
-
-    number_of_pages = ceil(int(total_number_books) / 20)
-
-
 def next_buton(page_url):
     reponse = requests.get(page_url)
     page = reponse.content
@@ -42,5 +31,4 @@ if __name__ == '__main__':
     reponse = requests.get(page_url)
     page = reponse.content
     soup = BeautifulSoup(page, "html.parser")
-    number_of_page(page_url)
     next_buton(page_url)
