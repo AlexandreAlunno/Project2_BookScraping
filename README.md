@@ -3,7 +3,6 @@
 This project was made to scrap the data from the site http://books.toscrape.com/index.html \
 Files overview: \
 recuperation_URLs.py \
-csv_writer.py \
 find_categories.py \
 next_page.py \
 image_download.py \
@@ -17,6 +16,9 @@ requirements.txt \
 categories_csv_files (empty folder to store csv and image, see last available script)
 ***
 Installation:\
+Set up a virtual environement: \
+In the cmd use the command: python -m venv <environment name> \
+
 To run the different scripts you'll need to install the requirements as defined in the requirements.txt file \
 Use the command : pip install -r requirements.txt
 ***
