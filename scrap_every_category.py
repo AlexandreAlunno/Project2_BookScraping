@@ -1,3 +1,4 @@
+# -- coding: utf-8 --:-
 import os
 import csv
 import shutil
@@ -33,9 +34,10 @@ for categories, names in zip(page_urls, category_names):
 
     en_tete = ["URL", "Categorie", "Titre", "Description", "UPC", "Type", "Prix Hors Tax", "Prix Avec Tax", "Tax","Disponnibilité", "Nombre d'avis", "URL Couverture"]
     csv_file_name = f"categories_csv_files\\{number_category}_{names}\\{number_category}_{names}.csv"
-    with open(csv_file_name, "w", encoding='utf-8') as csv_file:
+    with open(csv_file_name, "w", errors="ignore") as csv_file:
         writer = csv.writer(csv_file, delimiter=",")
         writer.writerow(en_tete)
         for data in books_data:
             writer.writerow(data)
-
+    books_data = []
+    print(f"{names} is scrapped")
