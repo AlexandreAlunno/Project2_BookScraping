@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from math import *
+
 
 page_url = "http://books.toscrape.com/catalogue/category/books/travel_2/index.html"
 

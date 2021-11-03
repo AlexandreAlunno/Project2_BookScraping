@@ -1,8 +1,5 @@
-import requests
-from bs4 import BeautifulSoup
 import csv
 from recuperation_URLs import recuperation_urls_books
-from changing_page import next_page_url
 from scrap_one_book import scrap_data_books
 
 books_data = []
