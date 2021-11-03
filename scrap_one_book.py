@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-
+import csv
 
 def scrap_data_books(book_url):
     reponse = requests.get(book_url)
@@ -37,8 +37,17 @@ def scrap_data_books(book_url):
     return book_data
 
 
+
+
+
+
 if __name__ == '__main__':
     book_url = 'http://books.toscrape.com/catalogue/orange-the-complete-collection-1-orange-the-complete-collection-1_914/index.html'
     book_data = scrap_data_books(book_url)
-en_tete = ["URL", "Categorie", "Titre", "Description", "UPC", "Type", "Prix Hors Tax", "Prix Avec Tax", "Tax", "Disponnibilité", "Nombre d'avis", "URL Couverture"]
 
+
+en_tete = ["URL", "Categorie", "Titre", "Description", "UPC", "Type", "Prix Hors Tax", "Prix Avec Tax", "Tax", "Disponnibilité", "Nombre d'avis", "URL Couverture"]
+with open("data_one_book.csv", "w") as csv_file:
+    writer = csv.writer(csv_file, delimiter=",")
+    writer.writerow(en_tete)
+    writer.writerow(book_data)
