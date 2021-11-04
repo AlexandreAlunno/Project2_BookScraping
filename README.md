@@ -19,7 +19,7 @@ Installation:\
 in the cmd go to the folder Project2_BookScraping \
 Set up a virtual environement: \
 In the cmd use the command: python -m venv <environment name> \
-activate the virtual environment with the command : env/script/activate.bat \
+activate the virtual environment with the command : .\venv\Scripts\activate \
 
 To run the different scripts you'll need to install the requirements as defined in the requirements.txt file \
 Use the command : pip install -r requirements.txt \
